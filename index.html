@@ -25,9 +25,53 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+  <!-- Unicon -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+
+  <!-- 
+    - Typed Js
+   -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+    integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
 </head>
 
 <body id="top" class="dark_theme">
+
+
+  <div id="loader">
+    <div id="wrapperload">
+      <div class="elem h1 logo">
+        <h3>Aditya<span style="color: black;">.</span></h3>
+      </div>
+      <div class="elem">
+        <h3 style="color: black;">Frontend developer</h3>
+      </div>
+      <div class="elem">
+        <h3 style="color: black;">Web Developer</h3>
+      </div>
+      <div class="elem h1 logo">
+        <h3 class="wlcm">Welcome To My Portfolio</h3>
+      </div>
+    </div>
+  </div>
 
   <!-- 
     - #HEADER
@@ -36,16 +80,16 @@
   <header class="header" data-header>
     <div class="container">
 
-      <h1 class="h1 logo">
+      <h1 class="h1 logo navitem">
         <a href="#">Aditya<span>.</span></a>
       </h1>
 
-      <div class="navbar-actions">
+      <div class="navbar-actions navitem">
 
-        <!-- <select name="language" id="lang">
+        <select name="language" id="lang">
           <option value="en">En</option>
           <option value="ar">Ar</option>
-        </select> -->
+        </select>
 
         <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
           <span class="icon"></span>
@@ -63,23 +107,23 @@
         <ul class="navbar-list">
 
           <li>
-            <a href="#home" class="navbar-link">Home.</a>
+            <a href="#home" class="navbar-link navitem">Home.</a>
           </li>
 
           <li>
-            <a href="#about" class="navbar-link">About.</a>
+            <a href="#about" class="navbar-link navitem">About.</a>
           </li>
 
           <li>
-            <a href="#skills" class="navbar-link">Skills.</a>
+            <a href="#skills" class="navbar-link navitem">Skills.</a>
           </li>
 
-          <li>
+          <!-- <li>
             <a href="#portfolio" class="navbar-link">Portfolio.</a>
-          </li>
+          </li> -->
 
           <li>
-            <a href="#contact" class="navbar-link">Contact.</a>
+            <a href="#contact" class="navbar-link navitem">Contact.</a>
           </li>
 
         </ul>
@@ -99,28 +143,27 @@
         - #HERO
       -->
 
-      <section class="hero" id="home">
+      <section class="hero scroll-scale" id="home">
 
         <figure class="hero-banner">
-
           <picture>
-            <source srcset="./assets/images/hero-banner.png" media="(min-width: 768px)">
-            <source srcset="./assets/images/hero-banner-md.png" media="(min-width: 500px)">
-            <img src="./assets/images/hero-banner-sm.png" alt="A man in a blue shirt with a happy expression"
-              class="w-100">
+            <!-- <source srcset="./assets/images/mine-banner.png" media="(min-width: 768px)"> -->
+            <!-- <source srcset="./assets/images/mine-banner-md.png" media="(min-width: 500px)"> -->
           </picture>
-
         </figure>
 
-        <div class="hero-content">
+        <img src="./assets/images/mine.png" alt="" class="graph" id="right">
 
-          <h2 class="h2 hero-title">We Design & Build Creative Products</h2>
-
-          <a href="#contact" class="btn btn-primary">Get in touch</a>
+        <div class="hero-content leftitem">
+          <h3 class="h4 leftitem">Hello It's Me</h3>
+          <h3 class="h2 hero-title leftitem">Aditya Sahu</h3>
+          <h3 class="h4 leftitem">And I'm a <span id="element"></span></h3>
+          <a href="#contact" class="btn btn-primary leftitem">Contact Me</a>
+        </div>
 
         </div>
 
-        <ul class="hero-social-list">
+        <ul class="hero-social-list leftitem">
 
           <li>
             <a href="#" class="hero-social-link">
@@ -148,7 +191,7 @@
 
         </ul>
 
-        <a href="#stats" class="scroll-down">Scroll</a>
+        <a href="#about" class="scroll-down navitem">Scroll &nbsp;<i class="fas fa-arrow-circle-right fa-beat"></i></a>
 
       </section>
 
@@ -160,7 +203,7 @@
         - #STATS
       -->
 
-      <section class="stats" id="stats">
+      <!-- <section class="stats" id="stats">
         <ul class="stats-list">
 
           <li>
@@ -212,10 +255,7 @@
           </li>
 
         </ul>
-      </section>
-
-
-
+      </section> -->
 
 
       <!-- 
@@ -224,31 +264,135 @@
 
       <section class="about" id="about">
 
-        <figure class="about-banner">
-          <img src="./assets/images/about-banner.png" alt="A man in a alice blue shirt with a thinking expression"
-            class="w-100">
-        </figure>
+        <!-- <figure class="about-banner">
+          <img src="./assets/images/mine.png" alt=""
+            class="w-100 scroll-left">
+        </figure> -->
 
-        <div class="about-content section-content">
+        <!-- Qualification -->
+
+        <div class="qual scroll-left">
+          <h1 class="qual-section-title">Qualification</h1>
+          <span class="qual-section-subtitle">My personal journey</span>
+
+
+          <div class="qual-container">
+            <div class="qual-tabs">
+              <div class="qual-button qual-active" data-target="#education">
+                <i class="uil uil-graduation-cap qual-icon"></i>
+                Education
+              </div>
+
+              <div class="qual-button qual-active work" data-target="#work">
+                <i class="uil uil-briefcase-alt qual-icon"></i>
+                Work
+              </div>
+
+
+              <div class="qual-sections">
+                <!-- Qualification Content 1 -->
+
+                <div class="qual-content qual-active" data-content id="education">
+
+                  <!-- Qualification 1 -->
+                  <div class="qual-data">
+                    <div>
+                      <h3 class="qual-title">Computer Engineer</h3>
+                      <span class="qual-subtitle">University</span>
+                      <div class="qual-calender">
+                        <i class="uil uil-calendar-alt qual-icon"></i>
+                        2021-2024
+                      </div>
+                    </div>
+
+                    <div>
+                      <span class="qual-rounder"></span>
+                      <span class="qual-line"></span>
+                    </div>
+                  </div>
+
+                  <!-- Qualification 2 -->
+                  <div class="qual-data">
+                    <div></div>
+                    <div>
+                      <span class="qual-rounder"></span>
+                      <span class="qual-line"></span>
+                    </div>
+
+                    <div>
+                      <h3 class="qual-title">12th</h3>
+                      <span class="qual-subtitle">CBSE</span>
+                      <div class="qual-calender">
+                        <i class="uil uil-calendar-alt"></i>
+                        2019-2021
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Qualification 3 -->
+                  <div class="qual-data">
+                    <div>
+                      <h3 class="qual-title">Computer Engineer</h3>
+                      <span class="qual-subtitle">University</span>
+                      <div class="qual-calender">
+                        <i class="uil uil-calendar-alt qual-icon"></i>
+                        2021-2024
+                      </div>
+                    </div>
+                    <div>
+                      <span class="qual-rounder"></span>
+                      <!-- <span class="qual-line"></span> -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Qualification Content 2 -->
+
+                <div class="qual-content" data-content id="work">
+
+                  <!-- Qualification 1 -->
+                  <div class="qual-data">
+                    <div>
+                      <h3 class="qual-title">Fresher</h3>
+                      <span class="qual-subtitle">University</span>
+                      <div class="qual-calender">
+                        <i class="uil uil-calendar-alt"></i>
+                        2021-2024
+                      </div>
+                    </div>
+
+                    <div>
+                      <span class="qual-rounder"></span>
+                      <span class="qual-line"></span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content section-content scroll-scale">
 
           <p class="section-subtitle">About me</p>
 
-          <h2 class="h3 section-title">Need a Creative Product? I can Help You!</h2>
+          <h2 class="h3 section-title"">Need a Creative Product? I can Help You!</h2>
 
-          <p class="section-text">
+          <p class=" section-text">
             Hi! I’m Jack Reacher, and I’m a developer who has passion for building clean web applications with intuitive
             functionalities. I enjoy the process of turning ideas into reality using creative solutions. I’m always
             curious about
             learning new skills, tools, and concepts. In addition to working on various solo full stack projects, I have
             worked with
             creative teams, which involves daily stand-ups and communications, source control, and project management.
-          </p>
+            </p>
 
-          <div class="btn-group">
-            <button class="btn btn-secondary">Hire me</button>
+            <div class="btn-group">
+              <!-- <a href="#contact"><button class="btn btn-secondary">Hire me</button></a> -->
 
-            <button class="btn btn-primary">Download cv</button>
-          </div>
+              <button class="btn btn-primary">Download cv</button>
+            </div>
 
         </div>
 
@@ -264,7 +408,7 @@
 
       <section class="skills" id="skills">
 
-        <div class="skills-content section-content">
+        <div class="skills-content section-content scroll-scale">
 
           <p class="section-subtitle">My skills</p>
 
@@ -284,7 +428,7 @@
 
         </div>
 
-        <div class="skills-box" data-skills-box>
+        <div class="skills-box scroll-right" data-skills-box>
 
           <ul class="skills-list">
 
@@ -318,7 +462,7 @@
               </div>
             </li>
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">TypeScript</div>
 
@@ -326,9 +470,9 @@
                   <img src="./assets/images/typescript.png" alt="TypeScript logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">jQuery</div>
 
@@ -336,7 +480,7 @@
                   <img src="./assets/images/jquery.png" alt="jQuery logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
             <li>
               <div class="skill-card">
@@ -348,7 +492,7 @@
               </div>
             </li>
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">Angular</div>
 
@@ -356,7 +500,7 @@
                   <img src="./assets/images/angular.png" alt="Angular logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
             <li>
               <div class="skill-card">
@@ -368,7 +512,7 @@
               </div>
             </li>
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">Vue</div>
 
@@ -376,9 +520,9 @@
                   <img src="./assets/images/vue.png" alt="Vue logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">Firebase</div>
 
@@ -386,9 +530,9 @@
                   <img src="./assets/images/firebase.png" alt="Firebase logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">PugJs</div>
 
@@ -396,9 +540,9 @@
                   <img src="./assets/images/pugjs.png" alt="PugJs logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">SASS</div>
 
@@ -406,13 +550,13 @@
                   <img src="./assets/images/sass.png" alt="SASS logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
           </ul>
 
           <ul class="tools-list">
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">Ajax</div>
 
@@ -420,9 +564,9 @@
                   <img src="./assets/images/ajax.png" alt="Ajax logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">Gulp</div>
 
@@ -430,9 +574,9 @@
                   <img src="./assets/images/gulp.png" alt="Gulp logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">Webpack</div>
 
@@ -440,7 +584,7 @@
                   <img src="./assets/images/webpack.png" alt="Webpack logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
             <li>
               <div class="skill-card">
@@ -452,7 +596,7 @@
               </div>
             </li>
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">Npm</div>
 
@@ -460,7 +604,7 @@
                   <img src="./assets/images/npm.png" alt="Npm logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
             <li>
               <div class="skill-card">
@@ -482,7 +626,7 @@
               </div>
             </li>
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">Trello</div>
 
@@ -490,9 +634,9 @@
                   <img src="./assets/images/trello.png" alt="Trello logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">ClickUp</div>
 
@@ -500,9 +644,9 @@
                   <img src="./assets/images/clickup.png" alt="ClickUp logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">Slack</div>
 
@@ -510,9 +654,9 @@
                   <img src="./assets/images/slack.png" alt="Slack logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">Photoshop</div>
 
@@ -520,9 +664,9 @@
                   <img src="./assets/images/photoshop.png" alt="Photoshop logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
-            <li>
+            <!-- <li>
               <div class="skill-card">
                 <div class="tooltip">Adobe XD</div>
 
@@ -530,7 +674,7 @@
                   <img src="./assets/images/adobe-xd.png" alt="Adobe XD logo">
                 </div>
               </div>
-            </li>
+            </li> -->
 
           </ul>
 
@@ -546,7 +690,7 @@
         - #PROJECTS
       -->
 
-      <section class="project" id="portfolio">
+      <!-- <section class="project" id="portfolio">
 
         <ul class="project-list">
 
@@ -689,7 +833,7 @@
 
         </ul>
 
-      </section>
+      </section> -->
 
 
 
@@ -701,7 +845,7 @@
 
       <section class="contact" id="contact">
 
-        <div class="contact-content section-content">
+        <div class="contact-content section-content scroll-left">
 
           <p class="section-subtitle">Contact</p>
 
@@ -723,7 +867,7 @@
                 <h3 class="h4 contact-item-title">Address:</h3>
 
                 <address class="contact-info">
-                  941 Saqrqorish Road, alandalos, grnata, wa 47122-4194
+                  Jajmau Kanpur Uttar Pradesh 208010
                 </address>
               </div>
 
@@ -738,9 +882,9 @@
               <div class="wrapper">
                 <h3 class="h4 contact-item-title">Phone:</h3>
 
-                <a href="tel:01234567789" class="contact-info">(01) 234 567 789</a>
+                <a href="tel:7309884408" class="contact-info">+91 73098 84408</a>
 
-                <a href="tel:09765432200" class="contact-info">(09) 765 432 200</a>
+                <!-- <a href="tel:09765432200" class="contact-info">(09) 765 432 200</a> -->
               </div>
 
             </li>
@@ -754,9 +898,9 @@
               <div class="wrapper">
                 <h3 class="h4 contact-item-title">Email:</h3>
 
-                <a href="mailto:info@jack.com" class="contact-info">info@jack.com</a>
+                <a href="mailto:sahuaditya73@gmail.com" class="contact-info">sahuaditya73@gmail.com</a>
 
-                <a href="mailto:support@jack.com" class="contact-info">support@jack.com</a>
+                <!-- <a href="mailto:support@jack.com" class="contact-info">support@.com</a> -->
               </div>
 
             </li>
@@ -803,7 +947,7 @@
 
         </div>
 
-        <form action="" class="contact-form">
+        <form action="" class="contact-form scroll-right" method="post" name="google-sheet">
 
           <div class="form-wrapper">
 
@@ -811,7 +955,7 @@
 
             <div class="input-wrapper">
 
-              <input type="text" name="name" id="name" required placeholder="e.g John Doe" class="input-field">
+              <input type="text" name="name" id="name" required placeholder="Your name" class="input-field">
 
               <ion-icon name="person-circle"></ion-icon>
 
@@ -825,7 +969,7 @@
 
             <div class="input-wrapper">
 
-              <input type="email" name="email" id="email" required placeholder="e.g johndoe@mail.com"
+              <input type="email" name="email" id="email" required placeholder="e.g example@mail.com"
                 class="input-field">
 
               <ion-icon name="mail"></ion-icon>
@@ -862,8 +1006,9 @@
             </div>
 
           </div>
-
-          <button type="submit" class="btn btn-primary">Send</button>
+          <div class="buttons">
+            <button type="submit" class="btn btn-primary btn1" id="send" name="submit">Send</button><br>
+          </div>
 
         </form>
 
@@ -872,20 +1017,19 @@
     </article>
   </main>
 
-
-
+  <ul class="notifications"></ul>
 
 
   <!-- 
     - #FOOTER
   -->
 
-  <footer class="footer">
+  <footer class="footer scroll-scale">
     <div class="container">
 
       <p class="h1 logo">
         <a href="#">
-         Aditya Sahu<span>.</span>
+          Aditya Sahu<span>.</span>
         </a>
       </p>
 
@@ -917,11 +1061,16 @@
   -->
   <script src="./assets/js/script.js"></script>
 
+
   <!-- 
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
 
 </body>
 

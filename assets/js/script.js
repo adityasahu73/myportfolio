@@ -90,6 +90,7 @@ themeToggleBtn.addEventListener("click", function () {
 
 });
 
+
 /**
  * check & apply last time selected theme from localStorage
  */

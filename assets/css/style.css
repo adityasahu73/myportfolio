@@ -528,12 +528,12 @@ main {
 
 .graph::before,.graph{
   background-color: var(--sizzling-sunrise);
-  animation: animate-before 8s ease-in-out infinite;
+  animation: animate-before 5s ease-in-out infinite;
 }
 
 .graph::after{
   background-color: var(--raw-seinna);
-  animation: animate-after 8s ease-in-out infinite;
+  animation: animate-after 5s ease-in-out infinite;
 }
 
 
@@ -552,7 +552,7 @@ main {
     border-radius:36% 64% 35% 65% / 54% 41% 59% 46% ;
   }
   50% {
-    border-radius:46% 54% 43% 57% / 41% 47% 53% 59%  ;
+    border-radius:56% 44% 54% 46% / 54% 49% 51% 46% ;
   }
   100% {
     border-radius:36% 64% 35% 65% / 54% 41% 59% 46% ;
@@ -564,7 +564,7 @@ main {
     border-radius: 57% 43% 39% 61% / 36% 71% 29% 64% ;
   }
   50% {
-    border-radius:67% 33% 57% 43% / 37% 47% 53% 63%  ;
+    border-radius:56% 44% 54% 46% / 62% 49% 51% 38%5 ;
   }
   100% {
     border-radius: 57% 43% 39% 61% / 36% 71% 29% 64%  ;
@@ -1176,6 +1176,9 @@ textarea.input-field {
     margin-bottom: 50px;
     width: 50%;
   }
+  .navbar-list > li {
+    overflow: visible;
+  }
 }
 
 /**
@@ -1620,7 +1623,10 @@ textarea.input-field {
   }
   .qual-data {
     column-gap: 0.5rem;
-}
+  }
+  .navbar-list > li {
+    overflow: visible;
+  }
 }
 
 /**

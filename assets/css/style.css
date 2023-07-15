@@ -754,7 +754,7 @@ main {
   display: inline-block;
   width: 13px;
   height: 13px;
-  background-color: var(--sizzling-sunrise);
+  background-color: var(--first-color);
   border-radius: 50%;
 }
 

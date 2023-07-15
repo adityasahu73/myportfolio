@@ -227,25 +227,6 @@ tabs.forEach(tab =>{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Animation 
 
 var tl = gsap.timeline();
@@ -276,6 +257,10 @@ tl.from('.navitem', {
     ease: 'Expo.easeInOut',
     opacity: 0
 }, '-=2')
+
+
+
+// Animation 
 
 
 const observer = new IntersectionObserver((entries)=>{

@@ -10,7 +10,7 @@
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/svg+xml">
 
   <!-- 
     - custom css link
@@ -56,9 +56,6 @@
 <body id="top" class="dark_theme">
 
 
-
-
-
   <input type="radio" name="color" id="color-1" />
   <input type="radio" name="color" id="color-2" />
   <input type="radio" name="color" id="color-3" />
@@ -70,6 +67,8 @@
   <input type="radio" name="color" id="color-9" />
   <input type="radio" name="color" id="color-10" />
   <input type="checkbox" id="toggler-color">
+  <input type="checkbox" id="feedback-star-toggler">
+
 
   
   <div class="style-switcher">
@@ -87,6 +86,41 @@
     <label for="color-10" class="color-10 color"></label>
     </div>
   </div>
+
+    <!-- 
+    - #Feedback
+  -->
+
+
+  <!-- <div class="feedback">
+    <div class="container-star">
+      <div class="post">
+        <div class="text">Thanks for rating us!</div>
+        <div class="edit">EDIT</div>
+      </div>
+      <div class="star-widget">
+        <input type="radio" name="rate" id="rate-5">
+        <label for="rate-5" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-4">
+        <label for="rate-4" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-3">
+        <label for="rate-3" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-2">
+        <label for="rate-2" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-1">
+        <label for="rate-1" class="fas fa-star"></label>
+        <form action="#">
+          <header></header>
+          <div class="textarea">
+            <textarea cols="30" placeholder="Describe your experience.."></textarea>
+          </div>
+          <div class="btn-star">
+            <button type="submit">Post</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div> -->
 
 
   <div id="loader">
@@ -124,6 +158,11 @@
         <label for="toggler-color" class="style-switcher-toggler">
           <i class="fa-solid fa-gear fa-spin setting-icon"></i>
         </label>
+
+        <!-- <label for="feedback-star-toggler" class="star-toggler">
+          <i class="fa-solid fa-stars fa-shake star-icon"></i>
+        </label> -->
+      
 
         <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
           <span class="icon"></span>
@@ -165,7 +204,6 @@
 
     </div>
   </header>
-
 
 
 
@@ -440,7 +478,7 @@
             <div class="btn-group">
               <!-- <a href="#contact"><button class="btn btn-secondary">Hire me</button></a> -->
 
-              <button class="btn btn-primary">Download cv</button>
+              <button class="btn btn-primary" disabled>Download cv</button>
             </div>
 
         </div>
@@ -1078,6 +1116,7 @@
       <p class="copyright">
         &copy; 2023 <a href="#">Aditya</a>. All rights reserved
       </p>
+      
 
     </div>
   </footer>
@@ -1093,7 +1132,6 @@
   <a href="#top" class="go-top" data-go-top title="Go to Top">
     <ion-icon name="arrow-up"></ion-icon>
   </a>
-
 
 
 

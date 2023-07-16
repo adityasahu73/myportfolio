@@ -265,3 +265,31 @@ title = Go to Top
 google-stylesheet
 
 AKfycbzwMYsz7xXfgPFk7ltMVmSJ-PYSUo71JqG6tb7M0K8tHUvH-sufJt6DHbJdSUJ1PhIW
+
+
+
+
+
+
+
+
+
+
+
+
+var star = document.getElementById("star");
+var starbox = document.querySelector(".star-box");
+var display=0;
+
+star.onclick =()=>{
+  if(display==1){
+    starbox.style.display = "block";
+    display=0;
+  }
+  else{
+    starbox.style.display = "none";
+    display=1;
+  }
+}
+
+

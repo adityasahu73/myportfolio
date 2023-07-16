@@ -1365,23 +1365,8 @@ textarea.input-field {
   /* feedback */
   
   
-  /* .feedback{
-    display: block;
-    position: fixed;
-    z-index: 100;
-    margin-left: auto;
-    right: 10px;
-    width: fit-content;
-    display: block;
-    margin-right: 16px;
-  }
-  .star-toggler{
-    display: block;
-    color: var(--first-color);
-  }
-  #feedback-star-toggler:checked ~ .feedback{
-    display: none;
-  } */
+  /* .feedbac  */
+  
   .container-star{
     display: flex;
     flex-direction:column;
@@ -1510,7 +1495,7 @@ textarea.input-field {
     font-size: 20px;
     color: var(--color-primary);
     border-radius: 50%;
-    opacity: 1;
+    opacity: 0;
     cursor: auto;
     transform: translateY(10px);
     transition: var(--transition-1);
@@ -2014,14 +1999,19 @@ textarea.input-field {
     overflow: visible;
   }
   .star-box{
-    bottom: 80px;
-    left: 13px;
+    left: 54px;
   }
   .star-widget label{
-    font-size: 25px;
+    font-size: 30px;
   }
   .btn-star{
-    margin-left: 87px;
+    margin-left: 56px;
+  }
+  .btn-star button{
+    padding: 0px 25px;
+  }
+  #sucessfully {
+    margin-left: 65px;
   }
 }
 

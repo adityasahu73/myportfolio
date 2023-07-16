@@ -123,6 +123,11 @@ starform.addEventListener('submit', (e) => {
     .then((finalRes)=>{
       e.target.submit.innerHTML="Send";
       sucessfull.innerHTML="Thanks For rating!!"
+
+      setTimeout(function(){
+      sucessfull.innerHTML=""
+      },5000)
+      starform.reset();
     })
 })
 
@@ -293,5 +298,10 @@ star.onclick =()=>{
   }
 }
 
+let starshow = setTimeout(show,18000);
 
+function show(){
+  let showstar =document.getElementById('star');
+  showstar.style.opacity=1;
+}
 

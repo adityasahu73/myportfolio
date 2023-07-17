@@ -127,7 +127,19 @@ starform.addEventListener('submit', (e) => {
       setTimeout(function(){
       sucessfull.innerHTML=""
       },5000)
+
       starform.reset();
+
+      setTimeout(function(){
+        let hidestarbox = document.querySelector('.star-box')
+        hidestarbox.style.display="none";
+      },7000)
+
+      setTimeout(function(){
+        let hidestar = document.getElementById('star')
+        hidestar.style.opacity=0;
+      },9000)
+
     })
 })
 
@@ -137,15 +149,16 @@ form.addEventListener('submit', (e) => {
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response =>{
       e.target.submit.innerHTML="send";
+      completed.innerHTML="Thank you for Contacting Us!!"
+
+      setTimeout(function(){
+        completed.innerHTML=""
+        },5000)
+        form.reset();
     })
 })
 
 
-
-// Adding a click event listener to each button to create a toast when clicked
-// buttons.forEach(btn1 => {
-//     form.addEventListener("submit", () => createToast(btn1.id));
-// });
 
 // animation 
 
@@ -222,7 +235,6 @@ tl.from('.navitem', {
     stagger: .3,
     duration: 2,
     y: 20,
-    // delay: 6.5,
     ease: 'Expo.easeInOut',
     opacity: 0
 })
@@ -277,14 +289,6 @@ scrollLeft.forEach((el)=>observer.observe(el));
 
 // feedback star
 
-// const starbtn = document.querySelector(".btn-star");
-// const post = document.querySelector(".post");
-// const widget = document.querySelector(".star-widget");
-// starbtn.onclick = ()=>{
-//   widget.style.display = "none";
-//   post.style.display = "block";
-//   return false;
-// }
 
 var star = document.getElementById("star");
 var starbox = document.querySelector(".star-box");
@@ -298,10 +302,9 @@ star.onclick =()=>{
   }
 }
 
-let starshow = setTimeout(show,18000);
+let starshow = setTimeout(show,20000);
 
 function show(){
   let showstar =document.getElementById('star');
   showstar.style.opacity=1;
 }
-

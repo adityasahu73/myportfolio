@@ -1238,7 +1238,7 @@ textarea.input-field {
     transition: 3s;
   }
   
-  .scroll-right {
+  .scroll-right{
     opacity: 0;
     transform: translateX(180px);
     transition: 3s;

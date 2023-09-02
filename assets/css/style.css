@@ -1312,7 +1312,7 @@ textarea.input-field {
     background-color: hsl(24, 74%, 58%);
   }
   .color-3 {
-    background-color: hsl(305, 71%, 54%);
+    background-color: hsl(288, 100%, 50%);
   }
   .color-4 {
     background-color: hsl(0, 100%, 50%);
@@ -1343,7 +1343,7 @@ textarea.input-field {
     --first-color: hsl(24, 74%, 58%);
   }
   #color-3:checked ~ * {
-    --first-color: hsl(305, 71%, 54%);
+    --first-color: hsl(288, 100%, 50%);
   }
   #color-4:checked ~ * {
     --first-color:hsl(0, 100%, 50%);

@@ -133,12 +133,12 @@ starform.addEventListener('submit', (e) => {
       setTimeout(function(){
         let hidestarbox = document.querySelector('.star-box')
         hidestarbox.style.display="none";
-      },7000)
+      },5000)
 
       setTimeout(function(){
         let hidestar = document.getElementById('star')
         hidestar.style.opacity=0;
-      },9000)
+      },8000)
 
     })
 })
@@ -166,17 +166,12 @@ var tl = gsap.timeline();
 
 tl.from('.navitem', {
     stagger: .3,
-    duration: 2,
+    duration: 1.5,
     y: 20,
-    delay: 6.6,
+    delay: 4.6,
     ease: 'Expo.easeInOut',
     opacity: 0
 })
-.from('#smline', {
-    width: 0,
-    duration: 1,
-    ease: 'Expo.easeInOut',
-}, '-=2')
 .from('.leftitem', {
     stagger: .3,
     duration: 2,
